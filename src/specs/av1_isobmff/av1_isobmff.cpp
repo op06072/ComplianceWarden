@@ -2407,6 +2407,6 @@ const SpecDesc specAv1ISOBMFF = {
 };
 
 static auto const registered = registerSpec(&specAv1ISOBMFF);
+} // namespace
 
 extern const SpecDesc *const globalSpecAv1ISOBMFF = &specAv1ISOBMFF;
-} // namespace
