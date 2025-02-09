@@ -621,4 +621,6 @@ const SpecDesc specAv1Hdr10plus = {
 };
 
 static auto const registered = registerSpec(&specAv1Hdr10plus);
+
+extern const SpecDesc *const globalSpecAv1Hdr10plus = &specAv1Hdr10plus;
 }

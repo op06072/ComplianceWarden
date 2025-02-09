@@ -933,3 +933,5 @@ static const SpecDesc specAvif = {
 };
 
 static auto const registered = registerSpec(&specAvif);
+
+extern const SpecDesc *const globalSpecAvif = &specAvif;

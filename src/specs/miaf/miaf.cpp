@@ -1629,3 +1629,5 @@ static const SpecDesc specMiaf = {
 };
 
 static auto const registered = registerSpec(&specMiaf);
+
+extern const SpecDesc *const globalSpecMiaf = &specMiaf;

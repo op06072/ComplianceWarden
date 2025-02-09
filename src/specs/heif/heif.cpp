@@ -1317,3 +1317,5 @@ static const SpecDesc specHeif = {
 };
 
 static auto const registered = registerSpec(&specHeif);
+
+extern const SpecDesc *const globalSpecHeif = &specHeif;

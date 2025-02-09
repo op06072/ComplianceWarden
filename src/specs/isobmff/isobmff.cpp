@@ -687,3 +687,5 @@ const SpecDesc specIsobmff = {
 }
 
 static auto const registered = registerSpec(&specIsobmff);
+
+extern const SpecDesc *const globalSpecIsobmff = &specIsobmff;
