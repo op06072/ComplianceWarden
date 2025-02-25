@@ -6,7 +6,7 @@ CXXFLAGS+=-Wall -Wextra -Werror
 # Reduce executable size
 CXXFLAGS+=-fvisibility=hidden -fvisibility-inlines-hidden
 CXXFLAGS+=-ffunction-sections -fdata-sections
-LDFLAGS+=-Wl,-gc-sections
+LDFLAGS+=-Wl,-dead_strip
 
 ifeq ($(DEBUG),1)
   CXXFLAGS+=-g3
@@ -18,6 +18,9 @@ else
 endif
 
 CXXFLAGS+=-Isrc/ -I$(BIN)
+
+# git2
+CXXFLAGS+=-I$(HOMEBREW_PREFIX)/opt/libgit2/include
 
 all: everything
 
@@ -59,7 +62,8 @@ SRCS_CW+=src/specs/miaf/miaf.cpp src/specs/miaf/audio.cpp src/specs/miaf/brands.
   src/specs/miaf/derivations.cpp src/specs/miaf/colours.cpp src/specs/miaf/num_pixels.cpp\
   src/specs/miaf/profiles.cpp
 
-SRCS_CW+=$(BIN)/cw_version.cpp
+#SRCS_CW+=$(BIN)/cw_version.cpp
+SRCS_CW+=src/cw_version.cpp
 
 #------------------------------------------------------------------------------
 

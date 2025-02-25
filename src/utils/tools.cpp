@@ -5,6 +5,7 @@
 #include <cstdlib> // exit
 #include <stdexcept>
 #include <vector>
+#include <string>
 
 void ENSURE(bool cond, const char *format, ...)
 {
